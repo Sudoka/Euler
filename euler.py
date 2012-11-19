@@ -18,6 +18,10 @@ class euler:
             primes.append(i)
             mults.update(xrange(i*i, n+1, i))
     return primes
+
+  #returns the nth fibonacci number
+  def nth_fib(self, n):
+    return int(round((1.6180339**n - (-0.6180339)**n)/2.236067))
   
 
 
