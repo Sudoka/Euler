@@ -16,6 +16,9 @@ def primes(n):
 def nth_fib(self, n):
   return int(round((1.6180339**n - (-0.6180339)**n)/2.236067))
 
+#checks if a number is a palindrome
+def is_pal(n): return str(n) == str(n)[::-1]
+
 #returns the greatest common denominator (euclid's algorithm)
 def gcd(a,b):
   if b > a:

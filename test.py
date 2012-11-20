@@ -1,13 +1,15 @@
-#!/usr/bin/python -tt
-import re
-import sys
-from euler import *
+def is_palindromic(n): return str(n)==str(n)[::-1]
 
-def main():
-  e = euler()
-  print e.primes(10000000000)
+limit = 1000
+sqrt_limit = int(limit**.5)
+pal = set()
+ 
+for i in range(1, sqrt_limit):
+  sos = i*i
+  for j in range(i+1, sqrt_limit):
+    sos += j*j
+    if sos>=limit: break
+    if is_palindromic(sos): pal.add(sos)
 
-
-# Standard boilerplate to call the main() function.
-if __name__ == '__main__':
-  main()
+print sorted(list(pal))
+print sum(pal)
