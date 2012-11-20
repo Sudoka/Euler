@@ -5,6 +5,8 @@ from euler import *
 from time import time
 
 def main():
+
+  #see if a chain of next_nums ends up at 89. use memoization and voila
   ones = set()
   ones.add(1)
   ens = set()
